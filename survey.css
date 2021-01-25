@@ -1,5 +1,77 @@
 
-/*this is the header section*/
+
+*{
+  font-family: Open Sans;
+  padding: 0px;
+margin: 0px;
+box-sizing: border-box;
+}
+
+
+
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: coral;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+@media only screen and (max-width: 1000px) {
+ .container {
+  margin-left: 0%;
+  margin-right: 0%;
+}
+}
+
+.button-submit{
+  background-color: lightseagreen;
+  border: none;
+  color: white;
+  padding: 7px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: auto;
+  border-radius: 8px;
+  transition-duration: 0.4s;
+}
+
+.button-submit:hover {
+  background-color: rgb(232, 232, 232); /* Green */
+  color: lightseagreen;
+  border: 2px solid lightseagreen;
+}
+
+
+
 *{
   padding:0px;
   margin: 0px;
@@ -21,10 +93,7 @@
   text-transform: ;
   letter-spacing: 0px;
   font-size:20px;
-
 }
-
-
 .logo h3{
 	color:  #ffffff;
 	font: normal 28px 'Open Sans', cursive;
@@ -48,17 +117,7 @@
   letter-spacing: 3px;
   font-weight: bold;
   font-size: 14px;
-  
 }
-     
-.nav-links a:hover{
-  background-color: rgb(226, 226, 226); 
-  color: #5D5C61; 
-  display: inline-block;
-  border-radius:4px;
-  
-}
-
 .burger{
   display: none;
   cursor: click;
@@ -84,7 +143,7 @@
 @media screen and (max-width:670px){
 
     body{
-      overflow-x: none;
+      overflow-x: hidden;
       
     }
 
@@ -127,193 +186,6 @@
 }
 
 
-
-/*this is container made of css grid*/
-
-.container{
-  display: grid;
-  height: 150vh;
-  grid-template-rows: 0.10fr 1fr 1fr 1fr 1fr;
-  grid-template-columns: 0.7fr 1fr 1fr 1fr 1fr 0.7fr;
-  grid-template-areas:
-  "header header header header header header"
-  "margin-left main main main main margin-right"
-  "margin-left main2 main2 main2 main2 margin-right"
-  "margin-left main3 main3 main3 main3 margin-right"
-  "margin-left main4 main4 main4 main4 margin-right";
-  grid-gap:1px;
-  color: #5D5C61;
-}
-/*this is our header*/
-.header{
-  grid-area: header;
-  position: relative;
-}
-/*this is our main1*/
-.main1{
-  background-color: rgb(232, 232, 232);
-  grid-area: main;
-  color: #5D5C61;
-  display:flex;
-  align-items: center;
-}
-.item1{
- flex-grow:1;
-}
-.graphsvg{
-  position: relative;
-  right : -50%;
-  width:30%;
-}
-.item-text1{
-  flex-grow: 3;
-  max-width: 45%;
-  justify-content: center;
-  position: relative;
-  left: 8%;
-  z-index: 0;
-
-}
-
-/*this is our main 2*/
-.main2{
-  background-color: rgb(232, 232, 232);
-  grid-area: main2;
-  color: lightseagreen;
-  text-align: right;
-  display: flex;
-  align-items: center;
-}
-.item-text{
-  flex-grow: 3;
-  
-  max-width: 45%;
-  justify-content: center;
-  position: relative;
-  right: 10%;
-  z-index: 0;
-}
-.item{
-  flex-grow: 1;
-
-}
-.survey-form{
-  position: relative;
-  left : -50%;
-  width:30%;
-}
-
-/*this is our main3*/
-.main3{
-  background: rgb(232, 232, 232);
-  grid-area: main3;
-  display:flex;
-  align-items: center;
-}
-
-.us{
-  width: 45%;
-  position: relative;
-  right: -30%;
-}
-
-/*this is our main4*/
-.main4{
-  background-color: rgb(232, 232, 232);
-  grid-area: main4;
-  color: lightseagreen;
-  text-align: right;
-  display: flex;
-  align-items: center;
-}
-
-
-/*this is our margin*/
-.margin-left{
-  
-  grid-area: margin-left;
-}
-.margin-right{
-
-  grid-area: margin-right;
-}
-
-
-
-/*they are buttons in the homepage*/
-.button1{
-  
-  background-color: lightseagreen;
-  border: none;
-  color: white;
-  padding: 7px 16px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 15px;
-  margin: auto;
-  border-radius: 8px;
-  transition-duration: 0.4s;
-
-
-}
-.button1:hover {
-  background-color: rgb(232, 232, 232); /* Green */
-  color: lightseagreen;
-  border: 2px solid lightseagreen;
-}
-
-.link { 
-  color: white; 
-  text-decoration: none;
-}
-.link:hover { 
-  color: lightseagreen; 
-   text-decoration: none;
-  } 
-.link2 { 
-  color: white; 
-   text-decoration: none;
-}
-.link2:hover { 
-  color: #5D5C61; 
-   text-decoration: none;
-  } 
-
-.button2{
-  
-  background-color: #5D5C61;
-  border: none;
-  color: white;
-  padding: 7px 16px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 15px;
-  margin: auto;
-  border-radius: 8px;
-  transition-duration: 0.4s;
-
-
-}
-.button2:hover {
-  background-color: rgb(232, 232, 232); 
-  color: #5D5C61;
-  border: 2px solid #5D5C61;
-}
-
-
-/*this is graph section*/
-#chartContainer{
-  margin:auto;
-  margin-top:10%;
-}
-.chart{
-  margin: auto; 
-}
-
-/*this footer section*/
-
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
 
 * {
@@ -340,28 +212,40 @@ section {
 	font: bold 16px sans-serif;
 	padding: 55px 50px;
 }
+
 .footer-distributed .footer-left,
 .footer-distributed .footer-center,
 .footer-distributed .footer-right{
 	display: inline-block;
 	vertical-align: top;
 }
+
+
+
 .footer-distributed .footer-left{
 	width: 40%;
 }
+
+
+
 .footer-distributed h3{
 	color:  #ffffff;
 	font: normal 36px 'Open Sans', cursive;
 	margin: 0;
 }
+
 .footer-distributed h3 span{
 	color:  lightseagreen;
 }
+
+
+
 .footer-distributed .footer-links{
 	color:  #ffffff;
 	margin: 20px 0 12px;
 	padding: 0;
 }
+
 .footer-distributed .footer-links a{
 	display:inline-block;
 	line-height: 1.8;
@@ -369,12 +253,16 @@ section {
 	text-decoration: none;
 	color:  inherit;
 }
+
 .footer-distributed .footer-company-name{
 	color:  #222;
 	font-size: 14px;
 	font-weight: normal;
 	margin: 0;
 }
+
+
+
 .footer-distributed .footer-center{
 	width: 35%;
 }
@@ -430,8 +318,6 @@ section {
 .footer-distributed .footer-links .link-1:before {
   content: none;
 }
-
-/* Footer Right */
 
 .footer-distributed .footer-right{
 	width: 20%;

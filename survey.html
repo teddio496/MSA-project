@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="https://www.google.com/recaptcha/api.js" async defer>
+	</script>
+  <style>
+  </style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="survey.css" rel="stylesheet" />
+
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+
+	</script>
+
+	<script>
+		function SubForm (){
+    $.ajax({
+        url:'https://api.apispreadsheets.com/data/6430/',
+        type:'post',
+        data:$("#myForm").serializeArray(),
+        success: function(){
+          alert("Form Data Submitted :)"),
+          
+          location.href = 'index.html';
+        },
+        error: function(){
+          alert("There was an error :(")
+        }
+    });
+}
+	</script>
+ <div class="header">  
+        <nav class="idk">
+           <div class="logo">
+
+                <h3>SM<span>check</span></h3>
+              </div>
+              <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="graph.html">Graphs</a></li>
+                <li><a href="survey.html">Survey</a></li>
+                <li><a href="about.html">About us</a></li>
+              </ul>
+                  <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                  </div>
+    </nav>
+  </div> 
+	<div class="container">
+    <div class="item"></div>
+
+    <div class="item">
+    <br>
+        <center><h1>Social media and happiness survey</h1></center> 
+
+
+	<div class="container">
+		<form id="myForm">
+
+    <h3> *Before the survey* </h3>
+    This is an anonymous survey! Please be honest with us! 
+    <br>Also, please press the submit button<strong>ONLY ONCE</strong>. <br><br>
+
+
+<label for="happiness">What was your average happiness througout the week? <br>   *Happier the higher!* <br> *from 1 to 100* <br></label> 
+<input type="number" min="0" max="100" name="happiness"required>
+
+<!--
+<label for="happiness" name="happpiness">What was your average happiness througout the week? <br>   *Higher the happier!* <br>
+
+      <input type="radio" id="happiness" name="happiness" value="1">
+      <label for="1">1</label><br>
+      <input type="radio" id="happiness" name="happiness" value="2">
+      <label for="1">2</label><br>
+      <input type="radio" id="happiness" name="happiness" value="1">
+      <label for="1">3</label><br>
+      <input type="radio" id="happiness" name="happiness" value="1">
+      <label for="1">4</label><br>
+      <input type="radio" id="happiness" name="happiness" value="1">
+      <label for="1">5</label><br>
+      <input type="radio" id="happiness" name="happiness" value="1">
+      <label for="1">6</label><br>
+      <input type="radio" id="happiness" name="happiness" value="1">
+      <label for="1">7</label><br>
+      <input type="radio" id="happiness" name="happiness" value="1">
+      <label for="1">8</label><br>
+      <input type="radio" id="happiness" name="happiness" value="1">
+      <label for="1">9</label><br>
+      <input type="radio" id="happiness" name="happiness" value="1">
+      <label for="1">10</label><br>
+    </label>-->
+     <br>
+     <br>
+
+
+
+
+     <label for="usage">How much social media did you use in the last week in total? <br>*Think of how much social media you used yesterday and multiply that by 7*</label> <br>
+
+      <input type="radio" id="usage" name="usage" value="no social media at all ">
+      <label for="2">no social media at all </label><br>
+      <input type="radio" id="usage" name="usage" value="one hour or less" required>
+      <label for="2">one hour or less</label><br>
+      <input type="radio" id="usage" name="usage" value="one hour or more">
+      <label for="2">one hour or more</label><br>
+      <input type="radio" id="usage" name="usage" value="two hours or more">
+      <label for="2">two hours or more</label><br>
+      <input type="radio" id="usage" name="usage" value="three hours or more">
+      <label for="2">three hours or more</label><br>
+       <input type="radio" id="usage" name="usage" value="four hours or more">
+      <label for="2">four hours or more</label><br>
+       <input type="radio" id="usage" name="usage" value="five hours or more">
+      <label for="2">five hours or more</label><br>
+      <br>
+
+    <label for="sleep">Did you get enough sleep?</label>
+    <br>
+    <input type="radio" id="sleep" name="sleep" value="yes">
+    <label for="yes">yes</label><br>
+    <input type="radio" id="sleep" name="sleep" value="no">
+    <label for="no">no</label><br>
+  
+    <br>
+    
+<label for="quest"> Which of the following apply when using social media? <br>
+*Choose the one that applys most for you!*</label> <br>
+
+      <input type="radio" id="quest" name="quest" value="Experiencing cyberbullying">
+      <label for="quest">Experiencing cyberbullying</label><br>
+      <input type="radio" id="quest" name="quest" value="Feeling missing out on something">
+      <label for="quest">Feeling missing out on something</label><br>
+      <input type="radio" id="quest" name="quest" value="Mindlessly scrolling through / opening and closing apps">
+      <label for="quest">Mindlessly scrolling through / opening and closing apps</label><br>
+      <input type="radio" id="quest" name="quest" value="Feeling bad about yourself about your appearance">
+      <label for="quest">Feeling bad about yourself about your appearance</label><br>
+      <input type="radio" id="quest" name="quest" value="None of the above">
+      <label for="quest">None of the above</label><br>
+
+    <br>
+
+    <label for="age"> What grade are you in?</label> <br>
+
+
+     <input type="radio" id="age" name="age" value="grade 1 to 4">
+    <label for="quest">grade 1 to 4</label><br>
+     <input type="radio" id="age" name="age" value="grade 5 to 8">
+    <label for="quest">grade 5 to 8</label><br>
+     <input type="radio" id="age" name="age" value="grade 9 to 12">
+    <label for="quest">grade 9 to 12</label><br>
+     <input type="radio" id="age" name="age" value="after grade 12">
+    <label for="quest">after grade 12</label><br> <br>
+ <textarea name="message" style="width:200px; height:100px;" placeholder="Anything else you want to say?"></textarea>
+  <br>
+
+<br>
+    <!--<input type="submit" value="Submit">-->
+  </form>
+   <button class="button-submit" onclick="SubForm()" onclick="this.style.visibility = 'hidden'">Just press once! :) <br>please!</button> 
+   
+
+<div class="item"></div>
+
+</div>
+</div>
+</div>
+
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3>SM<span>check</span></h3>
+
+				<p class="footer-links">
+					<a href="index.html" class="link-1">Home</a>
+					
+					<a href="graph.html">graphs</a>
+				
+					<a href="survey.html">Survey</a>
+				
+					<a href="about.html">About us</a>
+					
+				</p>
+
+				<p class="footer-company-name">SMcheck © 2021</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>Eggerstedter Weg 19,</span> 25421, Pinneberg</p>
+				</div>
+
+	
+<br>
+  				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:teddy.heo@isceducation,de">teddy.heo@isceducation.de</a></p>
+				</div>
+
+			</div>
+      
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About SMcheck</span>
+          We offer you with graphs and survey! Every information you enter in the survey will be kept anonymous.(you dont have to include any personal info anyway). Have a look around!
+				</p>
+
+				<div class="footer-icons">
+      
+
+				</div>
+
+			</div>
+
+		</footer>
+<script src="script.js"></script>
+
+</body>
+</html>
