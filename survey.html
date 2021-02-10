@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="https://www.google.com/recaptcha/api.js" async defer>
+	</script>
+  <style>
+  </style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="survey.css" rel="stylesheet" />
+
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+
+	</script>
+
+	<script>
+		function SubForm (){
+    $.ajax({
+        url:'https://api.apispreadsheets.com/data/6430/',
+        type:'post',
+        data:$("#myForm").serializeArray(),
+        success: function(){
+          alert("Form Data Submitted :)"),
+          
+          location.href = 'index.html';
+        },
+        error: function(){
+          alert("There was an error :(")
+        }
+    });
+}
+	</script>
+ <div class="header">  
+        <nav class="idk">
+           <div class="logo">
+
+                <h3>SM<span>check</span></h3>
+              </div>
+              <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="graph.html">Graphs</a></li>
+                <li><a href="survey.html">Survey</a></li>
+                <li><a href="about.html">About us</a></li>
+              </ul>
+                  <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                  </div>
+    </nav>
+  </div> 
+	<div class="container">
+    <div class="item"></div>
+
+    <div class="item">
+    <br>
+        <center><h1 class="Nunitofont">Social media and happiness survey</h1></center> 
+
+
+	<div class="container">
+		<form id="myForm" action="/index.html">
+
+    <h3 class="Nunitofont"> *Before the survey* </h3>
+    This is an anonymous survey! Please be honest with us! 
+    <br>Also, please press the submit button<strong>ONLY ONCE</strong>. <br><br>
+
+
+
+<!-- question 1 -->
+<label class="Question">1. What was your average happiness througout the week? <br>   *Happier the higher!* <br> *from 1 to 100* <br></label> 
+<input type="number" min="0" max="100" name="happiness" class="number" required>
+
+
+     <br>
+     <br>
+
+<!-- question 2 -->
+    <label class="Question">How many hours of social media did you use in the last week per day? </label> <br> <p class=""></p>
+ *put in 0 for no social media at all!* <br></label> 
+    <input type="number" min="0" max="100" name="usage" class="number" required>
+<br>
+      <br>
+<!-- question 3 -->
+    <label class="Question">Did you get enough sleep?</label>
+    <br>
+    <input type="radio" id="sleep" name="sleep" value="yes">
+    <label for="yes">yes</label><br>
+    <input type="radio" id="sleep" name="sleep" value="no">
+    <label for="no">no</label><br>
+  <br>
+<!-- question 4-->
+    <label class="Question">Can you actively remember the things you do on social media after you are done using it?
+</label>
+    <br>
+    <input type="radio" id="what" name="what" value="yes">
+    <label for="yes">yes</label><br>
+    <input type="radio" id="what" name="what" value="no">
+    <label for="no">no</label><br>
+    <input type="radio" id="what" name="what" value="only some">
+    <label for="no">only some of it</label><br>
+  
+    <br>
+<!-- question 5 -->
+    <label class="Question">From 1 to 5, how much do you personally relate with the following statement?  
+<br>
+“I experience a lot of ridicule and insults in the online environment.”
+ <br>
+  </label>
+      <input type="radio" id="ridicule1" name="ridicule" value="1">
+      <label for="ridicule1">1</label><br>
+      <input type="radio" id="ridicule2" name="ridicule" value="2">
+      <label for="ridicule2">2</label><br>
+      <input type="radio" id="ridicule3" name="ridicule" value="3">
+      <label for="ridicule3">3</label><br>
+      <input type="radio" id="ridicule4" name="ridicule" value="4">
+      <label for="ridicule4">4</label><br>
+      <input type="radio" id="ridicule5" name="ridicule" value="5">
+      <label for="ridicule5">5</label><br>
+
+<br>
+<!-- question 6 -->
+    <label class="Question">Do you think you're missing out on something, like an event or fun experience, when not using social media?
+</label>
+    <br>
+    <input type="radio" id="missing out1" name="missing out" value="yes">
+    <label for="missing out1">yes</label><br>
+    <input type="radio" id="missing out2" name="missing out" value="no">
+    <label for="missing out2">no</label><br>
+    <input type="radio" id="missing out3" name="missing out" value="sometimes">
+    <label for="missing out3">sometimes</label><br>
+    <br>
+<!-- question 7 -->
+    <label class="Question">Do you often close and open apps mindlessly?
+    </label>
+    <br>
+    <input type="radio" id="mindless1" name="mindless" value="yes, all the time">
+    <label for="mindless1">yes all the time</label><br>
+    <input type="radio" id="mindless2" name="mindless" value="no">
+    <label for="mindless2">no</label><br>
+    <input type="radio" id="mindless3" name="mindless" value="sometimes">
+    <label for="mindless3">sometimes</label><br>
+  
+    <br>
+<!-- question 8 -->
+<label class="Question">From 1 to 5, how much do you relate with the following statement. <br> “I have a lot of genuine friends and positive social interaction on social media”
+
+
+</label>
+    <br>
+    <input type="radio" id="rltionshp1" name="relationship" value="1">
+    <label for="rltionshp1">1</label><br>
+    <input type="radio" id="rltionshp2" name="relationship" value="2">
+    <label for="rltionshp2">2</label><br>
+    <input type="radio" name="relationship" id="rltionshp3" value="3">
+    <label for="rltionshp3">3</label><br>
+    <input type="radio" id="rltionshp4" name="relationship" value="4">
+    <label for="rltionshp4">4</label><br>
+    <input type="radio" id="rltionshp5" name="relationship" value="5">
+    <label for="rltionshp5">5</label><br>
+  
+    <br>
+    <!-- question 9 -->
+<label class="Question"> Which of the following social media networks do you use most often?
+</label>
+<br>
+<input type="radio" name="mostusedapp" id="Instagram" value="1">
+    <label for="Instagram">Instagram</label><br>
+    <input type="radio" id="Facebook" name="mostusedapp" value="2">
+    <label for="Facebook">Facebook</label><br>
+    <input type="radio" id="Youtube" name="mostusedapp" value="3">
+    <label for="Youtube">Youtube</label><br>
+    <input type="radio" id="Snapchat" name="mostusedapp" value="4">
+    <label for="Snapchat">Snapchat</label><br>
+    <input type="radio" id="Discord" name="mostusedapp" value="5">
+    <label for="Discord">Discord</label><br>
+    <input type="radio" id="Twitter" name="mostusedapp" value ="6">
+    <label for="Twitter">Twitter</label><br>
+    <br>
+  
+<br>
+<!-- question 10 -->
+<label class="Question">Do you feel sad about your own life or physical appearance, especially after or during your use of social media? Answer on a scale from 1-5, with 1 never and 5 all the time. 
+<br>
+
+
+</label>
+    <br>
+    <input type="radio" id="appr1" name="appearance" value="1">
+    <label for="appr1">1</label><br>
+    <input type="radio" id"appr2" name="appearance" value="2">
+    <label for="appr2">2</label><br>
+    <input type="radio" id="appr3" name="appearance" value="3">
+    <label for="appr3">3</label><br>
+    <input type="radio" id="appr4" name="appearance" value="4">
+    <label for="appr4">4</label><br>
+    <input type="radio" id = "appr5" name="appearance" value="5">
+    <label for="appr5">5</label><br>
+  
+  
+    <br>
+
+<!-- question 11 -->
+    <label class="Question"> What grade are you in?</label> <br>
+
+
+     <input type="radio" id="age1" name="age" value="grade 1 to 3">
+    <label for="age1">grade 1 to 3</label><br>
+     <input type="radio" id="age2" name="age" value="grade 4 to 6">
+    <label for="age2">grade 4 to 6</label><br>
+     <input type="radio" id="age3" name="age" value="grade 7 to 9">
+    <label for="age3">grade 7 to 9</label><br>
+    <input type="radio" id="age4" name="age" value="grade 10 to 12">
+    <label for="age4">grade 10 to 12</label><br>
+     <input type="radio" id="age5" name="age" value="after grade 12">
+    <label for="age5">after grade 12</label><br> <br>
+ <textarea name="message" style="width:200px; height:100px;" placeholder="Anything else you want to say?"></textarea>
+  <br>
+  
+<br>
+    <!--<input type="submit" value="Submit">-->
+  </form>
+   <button type = "submit" formaction="/index.html" class="button-submit" onclick="this.style.visibility = 'hidden'">Just press once! :) <br>please!</button> 
+   
+
+<div class="item"></div>
+
+</div>
+</div>
+</div>
+
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3>SM<span>check</span></h3>
+
+				<p class="footer-links">
+					<a href="index.html" class="link-1">Home</a>
+					
+					<a href="graph.html">graphs</a>
+				
+					<a href="survey.html">Survey</a>
+				
+					<a href="about.html">About us</a>
+					
+				</p>
+
+				<p class="footer-company-name">SMcheck © 2021</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>Eggerstedter Weg 19,</span> 25421, Pinneberg</p>
+				</div>
+
+	
+<br>
+  				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:teddy.heo@isceducation,de">teddy.heo@isceducation.de</a></p>
+				</div>
+
+			</div>
+      
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About SMcheck</span>
+          We offer you with graphs and survey! Every information you enter in the survey will be kept anonymous.(you dont have to include any personal info anyway). Have a look around!
+				</p>
+
+				<div class="footer-icons">
+      
+
+				</div>
+
+			</div>
+
+		</footer>
+<script src="script.js"></script>
+
+</body>
+</html>
