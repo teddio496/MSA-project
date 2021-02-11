@@ -87,11 +87,7 @@
 
 @media screen and (max-width:670px){
 
-    body{
-      overflow-x: none;
-      display:none;
-      
-    }
+  
 
     .nav-links{
     position: absolute;
@@ -152,7 +148,7 @@
 
 @media (max-width: 880px) {
   body{
-     display: none;
+     
   }
 }
 /*this is our header*/
@@ -319,13 +315,7 @@
 
 
 /*this is graph section*/
-#chartContainer{
-  margin:auto;
-  margin-top:10%;
-}
-.chart{
-  margin: auto; 
-}
+
 
 /*this footer section*/
 
@@ -335,7 +325,7 @@
   font-family: Open Sans;
 }
 
-section {
+.section {
   width: 100%;
   display: inline-block;
   background: #333;

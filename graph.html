@@ -3,6 +3,9 @@
 <!DOCTYPE HTML>
 <html>
 <head>  
+  <link rel="stylesheet" href="graph.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="graph.js"></script>
 <script>
 window.onload = function () {
 
@@ -118,9 +121,13 @@ chart.render();
 
 }
 </script>
-<link href="style.css" rel="stylesheet" />
+
+
 </head>
+
+
 <body>
+<!--header-->
   <div class="header">  
         <nav class="idk">
            <div class="logo">
@@ -143,7 +150,20 @@ chart.render();
   </div> 
 
 
-<div id="chartContainer" style="height: 500px; width: 70%;"></div><br><br><br><br><br><br>
+  <div class="graphContainer">
+  <button id="nonbutton" class='linedthin' onclick="myFunction()">Relations between social media usage and happiness</button> 
+  <div id="chartContainer" style="height: 500px; width: 70%;"></div> <br>
+
+
+  <button id="nonbutton" class='linedthin'>Graph 2 (further text or something has to be added)</button>  <br>
+
+  <button id="nonbutton" class='linedthin'>Graph 3 (further text or something has to be added)</button>
+   <br>
+   
+
+
+</div>
+
 
 
 <footer class="footer-distributed">
